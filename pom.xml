@@ -19,7 +19,7 @@
 	<groupId>org.cytoscape</groupId>
 	<artifactId>sbml</artifactId>
 	<version>3.3.0-SNAPSHOT</version>
-	<name>Cytoscape SBML Reader (${project.artifactId})</name>
+	<name>SBML Reader</name>
 	<packaging>bundle</packaging>
 
 	<scm>
