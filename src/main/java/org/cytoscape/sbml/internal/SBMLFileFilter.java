@@ -40,6 +40,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SBMLFileFilter implements CyFileFilter {
+	
 	private static final String SBML_XML_NAMESPACE = "http://www.sbml.org/sbml/"; //$NON-NLS-1$
 
 	private static final int DEFAULT_LINES_TO_CHECK = 20;
@@ -64,11 +65,11 @@ public class SBMLFileFilter implements CyFileFilter {
 	
 	@Override
 	public boolean accepts(URI uri, DataCategory category) {
-		if (!category.equals(DataCategory.NETWORK)) {
+		if (!category.equals(DataCategory.NETWORK))
 			return false;
-		}
-		try {
-			return accepts(getInputStream(uri.toURL()), category);
+		
+		try (InputStream is = getInputStream(uri.toURL())) {
+			return accepts(is, category);
 		} catch (IOException e) {
 			Logger logger = LoggerFactory.getLogger(getClass());
 			logger.error("Error while checking header", e); //$NON-NLS-1$

@@ -18,7 +18,7 @@
 
 	<groupId>org.cytoscape</groupId>
 	<artifactId>sbml</artifactId>
-	<version>3.3.3</version>
+	<version>3.3.4</version>
 	<name>SBML Reader</name>
 	<packaging>bundle</packaging>
 
