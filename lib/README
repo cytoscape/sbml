@@ -1,0 +1,2 @@
+# Install jsbml jar into local mvn (update file and version)
+mvn install:install-file -Dfile=jsbml-1.6.1-SNAPSHOT.jar -DgroupId=org.sbml.jsbml -DartifactId=jsbml -Dversion=1.6.1-SNAPSHOT -Dpackaging=jar
